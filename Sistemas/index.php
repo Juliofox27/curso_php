@@ -11,7 +11,7 @@ include 'conexao.php';
 <form method="POST"  action="index.php">
 
     codigo do convenio: <br>
-    <input type="number" name="frm_cd_convenio">
+    <input type="text" name="frm_cd_convenio">
 
     <button type="submit"> Enviar</button>
 
