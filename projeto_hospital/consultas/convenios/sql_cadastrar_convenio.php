@@ -19,7 +19,7 @@
                          VALUES 
                             ('$var_nm_convenio', '$var_coop')";
 
-    //SEGUNDO PASSO
+        //SEGUNDO PASSO
     //JUNTAR AS INFORMACOES DA CONEXAO + A CONSULTA
     $valida_cadastro_convenio = mysqli_query($conexao, $insere_convenios);
     //OBS a variavel $conexao é a mesma do conexao.php

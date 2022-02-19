@@ -39,7 +39,8 @@ Bem vindo a página de convênios!
             <input class="form-control" type="text" name="frm_nome_convenio" placeholder="Nome" required>
         </div> 
         <div class="col-2">
-            <input class="form-control" type="number" name="frm_cooparticipacao" placeholder="Cooparticipação" required>
+            <input class="form-control" type="number" name="frm_cooparticipacao" 
+            placeholder="Cooparticipação" required>
         </div>  
         <div class="col-1">
             <button class="btn btn-primary" type="submit"> <i class="fas fa-plus"></i> </button>
@@ -56,6 +57,7 @@ Bem vindo a página de convênios!
       <th> Código </th>
       <th> Nome </th>
       <th> Cooparticipação </th>
+      <th> Ações </th>
   </tr> 
 
     <?php
@@ -74,7 +76,19 @@ Bem vindo a página de convênios!
             <tr>
               <td> <?php echo $row_convenios['cd_convenio']; ?> </td>
               <td> <?php echo $row_convenios['nm_convenio']; ?> </td>
-              <td> <?php echo $row_convenios['cooparticipacao']; ?> </td>  
+              <td> <?php echo $row_convenios['cooparticipacao']; ?> </td>
+              
+              
+            <form method="POST" action="consultas/convenios/sql_excluir_convenio.php"> 
+
+              <input class="form-control" type="number" value="<?php echo $row_convenios['cd_convenio']; ?>" name="cd_convenio" hidden>
+
+              <td> <button class="btn btn-primary" type="submit"> <i class="fas fa-trash-alt"></i> </button> </td>
+              
+            </form>
+              
+                
+
             </tr>
 
    <?php } ?>  
